@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<div class="about-page">
+    <div class="profile">
+        <div class="avatar">
+            <img src="{{ .Params.avatar }}" alt="">
+        </div>
+
+        <div class="introduction">
+            {{.Content}}
+        </div>
+
+    </div>
+    <div class="clients">
+        <div class="title">Selected clients</div>
+        <div class="image">
+            <img src="{{.Params.clients}}" alt="clients" title="clients">
+        </div>
+    </div>
+</div>
+
+{{ end }}

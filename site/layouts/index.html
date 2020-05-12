@@ -1,13 +1,28 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
+<div class="home-page">
+    <div class="banner">
+        <img src="{{.Params.banner}}"/>
+    </div>
 
-{{ partial "short-text" .Params.blurb}}
+    <div class="content">
+        <div class="hello">
+            <span class="big">Hello</span><span class="comma">,</span><span class="space">&nbsp;</span><span class="normal">my name is Emily. I am a design researcher with 6 years experiences of running and leading research projects in the aspects of brand strategy, product innovation and service design.</span>
+        </div>
 
-{{ partial "2-up" .Params }}
+        <a href="/about">
+            <div class="see-more">
+                See more >
+            </div>
+        </a>
 
-{{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read more" "buttonLink" "/values") }}
+        <div class="my-work">
+            My work
+        </div>
 
-{{ partial "blog" . }}
-
+        <div class="cases">
+            {{ partial "case-list" . }}
+        </div>
+    </div>
+</div>
 {{ end }}
