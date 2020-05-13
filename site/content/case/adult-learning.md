@@ -1,7 +1,7 @@
 ---
 title: Adult Digital Learning Trends
 thumbnail: /img/case-adult-learning-thumbnail.jpg
-banner: /img/case-adult-learning-banner.jpg
+banner: /img/wechatimg819.jpeg
 name: Adult Digital Learning Trends
 position: Product Innovation. Market Landscape Analysis.
 cases:
