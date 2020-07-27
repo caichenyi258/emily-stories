@@ -26,13 +26,12 @@ jobs:
     - run: npm run build
       env:
         CI: true  
-    - name: rsync deployments
-      if: success()      
-      uses: burnett01/rsync-deployments@4.0
+    - name: upload to cos
+      if: success()
+      uses: manyuanrong/setup-ossutil@v1.0
       with:
-        switches: -avzr --delete
-        path: dist/
-        remote_path: /opt/website2/public/
-        remote_host: 47.101.163.89
-        remote_user: root
-        remote_key: ${{ secrets.DEPLOY_KEY }} 
+        endpoint: "oss.aliyuncs.com"
+        access-key-id: "${{ secrets.TENCENT_CLOUD_SECRET_ID }}"
+        access-key-secret: "${{ secrets.TENCENT_CLOUD_SECRET_KEY }}"
+        sts-token: ""
+    - run: ossutil cp -rf dist oss://emilystories/
