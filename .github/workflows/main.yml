@@ -31,7 +31,7 @@ jobs:
       uses: manyuanrong/setup-ossutil@v1.0
       with:
         endpoint: "oss.aliyuncs.com"
-        access-key-id: "${{ secrets.TENCENT_CLOUD_SECRET_ID }}"
-        access-key-secret: "${{ secrets.TENCENT_CLOUD_SECRET_KEY }}"
+        access-key-id: "${{ secrets.ALI_CLOUD_SECRET_ID }}"
+        access-key-secret: "${{ secrets.ALI_CLOUD_SECRET_KEY }}"
         sts-token: ""
     - run: ossutil cp -rf dist oss://emilystories/
