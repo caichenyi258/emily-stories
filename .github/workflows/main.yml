@@ -28,7 +28,7 @@ jobs:
         CI: true  
     - name: upload to cos
       if: success()
-      uses: manyuanrong/setup-ossutil@v1.0
+      uses: manyuanrong/setup-ossutil@v2.0
       with:
         endpoint: "oss-cn-shanghai.aliyuncs.com"
         access-key-id: "${{ secrets.ALI_CLOUD_SECRET_ID }}"
